@@ -1,4 +1,3 @@
-
 function getComputerChoice(){
 
 let choice;
@@ -91,10 +90,14 @@ function playRound(humanChoice, computerChoice) {
   
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+for (let i = 0; i < 5; i++) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+    playRound(humanSelection, computerSelection);
+
+    console.log("Score -> Human:", humanScore, "Computer:", computerScore);
+}
 
 if (humanScore>computerScore){
     console.log("User is the Victor");
